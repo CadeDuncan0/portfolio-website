@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/desktop",
+      "destination": "https://portfolio-website-desktop.vercel.app/desktop"
+    },
+    {
+      "source": "/desktop/:path*",
+      "destination": "https://portfolio-website-desktop.vercel.app/desktop/:path*"
+    }
+  ]
+}
