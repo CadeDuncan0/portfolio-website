@@ -1,6 +1,6 @@
 {
-  "name": "portfolio-website-professional",
-  "version": "0.1.0",
+  "name": "cadeduncan-portfolio-website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

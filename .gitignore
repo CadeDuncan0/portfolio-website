@@ -11,12 +11,6 @@ mcp-servers/**/node_modules
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-cypress/videos/
-cypress/screenshots/
-cypress/downloads/
-
 # next.js
 /.next/
 /out/
@@ -26,7 +20,7 @@ cypress/downloads/
 
 # misc
 .DS_Store
-*.pem   
+*.pem
 
 # debug
 npm-debug.log*
@@ -36,16 +30,48 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-
-# Cypress local secrets
-cypress.env.json
-
-# vercel
-.vercel
+!.env.example
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 
-# ai
+# owner-local dev environment / AI tooling — not part of the template
 .claude/
+CLAUDE.md
+.mcp.json
+.husky/
+.vscode/
+.github/
+Dockerfile
+dockerfile
+docker-compose.yml
+.dockerignore
+scripts/
+.playwright-mcp/
+
+# formatting / linting (local-only, never tracked; forks provide their own)
+.prettierrc*
+.prettierignore
+prettier.config.*
+eslint.config.*
+.eslintrc*
+commitlint.config.js
+lint-staged.config.*
+
+# testing (local-only, never tracked; forks provide their own)
+/coverage
+*.test.*
+*.spec.*
+__tests__/
+vitest.config.*
+vitest.setup.*
+cypress/
+cypress.config.ts
+cypress.env.json
+.storybook/
+*storybook.log
+storybook-static
+
+# vercel
+.vercel
