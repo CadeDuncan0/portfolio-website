@@ -1,4 +1,4 @@
-import type { ListEntry } from "@/lib/data";
+import type { ListEntry } from '@/lib/data'
 
 export function ListRow({ letter, gradient, title, sub, date }: ListEntry) {
   return (
@@ -13,9 +13,7 @@ export function ListRow({ letter, gradient, title, sub, date }: ListEntry) {
         <div className="text-base font-bold tracking-[0.3px] text-bright max-sm:text-lg">{title}</div>
         <div className="text-sm font-medium text-muted max-sm:text-[15px]">{sub}</div>
       </div>
-      <div className="whitespace-nowrap font-mono text-[12.5px] uppercase text-cyber-cyan/85 max-sm:text-[13px]">
-        {date}
-      </div>
+      <div className="whitespace-nowrap font-mono text-[12.5px] uppercase text-cyber-cyan/85 max-sm:text-[13px]">{date}</div>
     </div>
-  );
+  )
 }

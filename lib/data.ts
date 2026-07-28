@@ -1,7 +1,6 @@
 export const profile = {
   name: 'Cade',
-  taglineBefore:
-    'Full-stack engineer crafting clean, aesthetic web experiences — and the systems that power them. I turn ideas into ',
+  taglineBefore: 'Full-stack engineer crafting clean, aesthetic web experiences — and the systems that power them. I turn ideas into ',
   taglineHighlight: 'interfaces people love to use',
   taglineAfter: '.',
   // Served from public/imgs — Next.js exposes the public/ dir at the site root.

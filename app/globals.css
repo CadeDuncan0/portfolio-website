@@ -44,7 +44,7 @@
   --muted: #6b7d96;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   --cyan-ink: 5 112 130;
   --mag-ink: 194 26 159;
   --yellow-ink: 138 105 0;
@@ -82,8 +82,7 @@ body {
   background:
     radial-gradient(1100px 560px at 82% -8%, var(--wash-mag), transparent 60%),
     radial-gradient(960px 680px at -12% 8%, var(--wash-cyan), transparent 55%),
-    radial-gradient(700px 500px at 50% 120%, var(--wash-yellow), transparent 60%),
-    var(--bg);
+    radial-gradient(700px 500px at 50% 120%, var(--wash-yellow), transparent 60%), var(--bg);
   transition:
     background-color 0.25s ease,
     color 0.25s ease;
@@ -91,7 +90,7 @@ body {
 
 /* perspective grid backdrop (pre-rasterized texture — see --grid-img) */
 body::before {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -106,7 +105,7 @@ body::before {
    texture composites cheaply in every engine; fine repeating gradients on a
    full-viewport fixed layer do not (Firefox re-rasterized them per frame). */
 body::after {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   z-index: 2;
@@ -144,8 +143,7 @@ body::after {
   }
   .preview-grid {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 22px 22px;
   }
   /* Breathing glow that marks the resume download as the page's primary

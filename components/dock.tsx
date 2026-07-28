@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Home, Github, Linkedin, Mail, FileDown } from '@/components/icons'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { profile, socials } from '@/lib/data'
@@ -11,26 +12,14 @@ export function Dock() {
   return (
     <div className="fixed bottom-5 left-1/2 z-50 -translate-x-1/2">
       <div className="inline-flex items-center gap-1.5 rounded-[30px] border border-edge bg-surface px-3.5 py-[9px] shadow-[0_0_24px_rgba(0,234,255,0.22),inset_0_0_18px_rgba(0,234,255,0.06)] backdrop-blur-md">
-        <a href="/#" className={iconClass} aria-label="Home">
+        <Link href="/#" className={iconClass} aria-label="Home">
           <Home className="h-[18px] w-[18px]" />
-        </a>
+        </Link>
         <Divider />
-        <a
-          href={socials.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={iconClass}
-          aria-label="GitHub"
-        >
+        <a href={socials.github} target="_blank" rel="noopener noreferrer" className={iconClass} aria-label="GitHub">
           <Github className="h-[18px] w-[18px]" />
         </a>
-        <a
-          href={socials.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={iconClass}
-          aria-label="LinkedIn"
-        >
+        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className={iconClass} aria-label="LinkedIn">
           <Linkedin className="h-[18px] w-[18px]" />
         </a>
         <a href={`mailto:${socials.email}`} className={iconClass} aria-label="Email">

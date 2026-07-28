@@ -50,22 +50,12 @@ docker-compose.yml
 scripts/
 .playwright-mcp/
 
-# formatting / linting (local-only, never tracked; forks provide their own)
-.prettierrc*
-.prettierignore
-prettier.config.*
-eslint.config.*
-.eslintrc*
+# formatting / linting 
 commitlint.config.js
 lint-staged.config.*
 
-# testing (local-only, never tracked; forks provide their own)
+# testing
 /coverage
-*.test.*
-*.spec.*
-__tests__/
-vitest.config.*
-vitest.setup.*
 cypress/
 cypress.config.ts
 cypress.env.json
