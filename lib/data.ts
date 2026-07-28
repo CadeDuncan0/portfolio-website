@@ -6,6 +6,8 @@ export const profile = {
   taglineAfter: '.',
   // Served from public/imgs — Next.js exposes the public/ dir at the site root.
   avatar: '/imgs/linkedin-headshot.png',
+  // Same public/ root — served from public/docs.
+  resume: '/docs/Cade-Duncan-Resume.pdf',
 }
 
 export const socials = {
@@ -45,7 +47,7 @@ export const work: ListEntry[] = [
 
 export const education: ListEntry[] = [
   {
-    letter: 'C',
+    letter: 'F',
     gradient: 'linear-gradient(135deg,#00eaff,#3366ff)',
     title: 'California State University, Fullerton',
     sub: 'B.S. in Computer Science',
@@ -66,18 +68,13 @@ export const skills: string[] = [
   'JavaScript',
   'SQL',
   'Python',
-  'C++',
   'ASP.NET Core',
   'React',
   'Next.js',
-  'Redux Toolkit',
-  'Supabase',
-  'Vercel',
   'Godot',
   'Claude Code',
-  'MCP',
+  'Codex',
   'Vitest',
-  'Storybook',
 ]
 
 export type Project = {
@@ -104,6 +101,7 @@ export const projects: Project[] = [
     desc: 'A browser-based recreation of the Windows 7 Aero Glass desktop, featuring a custom window manager with Framer Motion animations, dual-role Supabase authentication, and a 25+ component design system documented in Storybook and guarded by zero-warning CI.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'Redux Toolkit'],
     preview: 'linear-gradient(135deg,#0d3433,#1a7a5f)',
+    website: 'https://cadeduncan.com/desktop',
     source: 'https://github.com/CadeDuncan0/portfolio-website-windows7',
   },
   {

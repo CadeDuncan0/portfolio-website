@@ -148,4 +148,28 @@ body::after {
       linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     background-size: 22px 22px;
   }
+  /* Breathing glow that marks the resume download as the page's primary
+     action. Lives on a wrapper and uses drop-shadow rather than box-shadow:
+     the button itself is clip-corner'd, and clip-path crops a box-shadow away
+     entirely, while a parent's drop-shadow traces the clipped silhouette. */
+  .cta-pulse {
+    animation: cta-pulse 3.6s ease-in-out infinite;
+  }
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 43, 214, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(255, 43, 214, 0.65));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-pulse {
+    animation: none;
+    filter: drop-shadow(0 0 8px rgba(255, 43, 214, 0.45));
+  }
 }

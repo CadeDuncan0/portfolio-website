@@ -3,6 +3,7 @@ import { SectionTitle } from '@/components/section-title'
 import { ListRow } from '@/components/list-row'
 import { ProjectCard } from '@/components/project-card'
 import { Dock } from '@/components/dock'
+import { ResumeButton } from '@/components/resume-button'
 import { profile, about, work, education, skills, projects, socials } from '@/lib/data'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
             <span className="text-cyber-cyan">{profile.taglineHighlight}</span>
             {profile.taglineAfter}
           </p>
+          <ResumeButton className="mt-6 max-sm:mt-7" />
         </div>
         <div
           className="h-[120px] w-[120px] shrink-0 rounded-full p-[3px] shadow-[0_0_28px_rgba(0,234,255,0.45),0_0_48px_rgba(255,43,214,0.3)] max-sm:h-[min(500px,80vw)] max-sm:w-[min(500px,80vw)] max-sm:p-1"

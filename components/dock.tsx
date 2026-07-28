@@ -1,6 +1,6 @@
-import { Home, Github, Linkedin, Mail } from '@/components/icons'
+import { Home, Github, Linkedin, Mail, FileDown } from '@/components/icons'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { socials } from '@/lib/data'
+import { profile, socials } from '@/lib/data'
 
 const iconClass =
   'flex h-[38px] w-[38px] items-center justify-center rounded-full border border-edge-soft bg-fill text-cyber-cyan transition-colors hover:border-cyber-cyan/40 hover:bg-cyber-cyan/10'
@@ -35,6 +35,16 @@ export function Dock() {
         </a>
         <a href={`mailto:${socials.email}`} className={iconClass} aria-label="Email">
           <Mail className="h-[18px] w-[18px]" />
+        </a>
+        <Divider />
+        <a
+          href={profile.resume}
+          download
+          className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-cyber-magenta/45 bg-cyber-magenta/[0.09] text-cyber-magenta transition-all duration-200 hover:border-cyber-magenta/80 hover:shadow-[0_0_18px_rgba(255,43,214,0.55)]"
+          aria-label="Download resume (PDF)"
+          title="Download resume (PDF)"
+        >
+          <FileDown className="h-[18px] w-[18px]" />
         </a>
         <Divider />
         <ThemeToggle />

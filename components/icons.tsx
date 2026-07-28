@@ -65,6 +65,23 @@ export const Mail = ({ className }: IconProps) => (
   </svg>
 );
 
+export const Download = ({ className }: IconProps) => (
+  <svg className={className} {...base}>
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <path d="M12 15V3" />
+  </svg>
+);
+
+export const FileDown = ({ className }: IconProps) => (
+  <svg className={className} {...base}>
+    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+    <path d="M12 18v-6" />
+    <polyline points="9 15 12 18 15 15" />
+  </svg>
+);
+
 export const Sun = ({ className }: IconProps) => (
   <svg className={className} {...base}>
     <circle cx="12" cy="12" r="4" />
