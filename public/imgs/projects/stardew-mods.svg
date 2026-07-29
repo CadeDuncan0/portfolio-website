@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="1024" height="512">
+  <!-- Stardew Valley Mods: synthwave sun over a neon crop field, pixel-art
+       sprouts planted along perspective rows, barn + trees on the horizon. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#150a2e" />
+      <stop offset=".55" stop-color="#0b0820" />
+      <stop offset="1" stop-color="#05060f" />
+    </linearGradient>
+    <radialGradient id="washMag">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity=".26" />
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="sunHalo">
+      <stop offset=".4" stop-color="#ff6ad5" stop-opacity=".3" />
+      <stop offset=".72" stop-color="#ff2bd6" stop-opacity=".12" />
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="sunFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcee0a" />
+      <stop offset=".45" stop-color="#ffa23c" />
+      <stop offset="1" stop-color="#ff2bd6" />
+    </linearGradient>
+    <linearGradient id="horizonGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00ffae" stop-opacity="0" />
+      <stop offset=".5" stop-color="#00ffae" stop-opacity=".3" />
+      <stop offset="1" stop-color="#00ffae" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="fieldFade" gradientUnits="userSpaceOnUse" x1="0" y1="286" x2="0" y2="512">
+      <stop offset="0" stop-color="#fff" stop-opacity=".12" />
+      <stop offset=".45" stop-color="#fff" stop-opacity=".9" />
+      <stop offset="1" stop-color="#fff" stop-opacity=".5" />
+    </linearGradient>
+    <mask id="fieldMask">
+      <rect y="286" width="1024" height="226" fill="url(#fieldFade)" />
+    </mask>
+    <mask id="sunMask">
+      <rect x="360" y="96" width="304" height="190" fill="#fff" />
+      <g fill="#000">
+        <rect x="360" y="186" width="304" height="4" />
+        <rect x="360" y="206" width="304" height="6" />
+        <rect x="360" y="228" width="304" height="8" />
+        <rect x="360" y="252" width="304" height="11" />
+        <rect x="360" y="277" width="304" height="15" />
+      </g>
+    </mask>
+
+    <!-- pixel sprout, drawn in a 12x12 cell with its base at y=12 -->
+    <g id="sprout">
+      <rect x="5" y="5" width="2" height="7" fill="#0f9c72" />
+      <rect x="1" y="3" width="4" height="3" fill="#00ffae" />
+      <rect x="7" y="3" width="4" height="3" fill="#00ffae" />
+      <rect x="4" width="4" height="4" fill="#fcee0a" />
+    </g>
+    <g id="pixelTree">
+      <rect x="14" y="34" width="8" height="18" fill="#0c2b22" stroke="#00ffae" stroke-opacity=".5" stroke-width="1.5" />
+      <path d="M4 34h28v-10H4zM8 24h20V12H8zM12 12h12V2H12z" fill="#0a2b21" stroke="#00ffae" stroke-opacity=".55" stroke-width="1.5" />
+    </g>
+    <g id="cloud">
+      <path d="M8 12h56v10H8zM16 4h40v8H16zM28 0h18v4H28z" fill="#c9f6ff" fill-opacity=".16" />
+      <path d="M16 4h40M28 0h18M8 12h8M56 12h8" stroke="#c9f6ff" stroke-opacity=".3" stroke-width="2" />
+    </g>
+  </defs>
+
+  <rect width="1024" height="512" fill="url(#sky)" />
+  <ellipse cx="820" cy="60" rx="360" ry="220" fill="url(#washMag)" />
+
+  <!-- sun -->
+  <circle cx="512" cy="250" r="245" fill="url(#sunHalo)" />
+  <circle cx="512" cy="250" r="140" fill="url(#sunFill)" mask="url(#sunMask)" />
+
+  <use href="#cloud" transform="translate(120 78) scale(1.5)" />
+  <use href="#cloud" transform="translate(760 118) scale(1.15)" />
+  <use href="#cloud" transform="translate(880 56)" />
+
+  <!-- horizon props -->
+  <g>
+    <path d="M96 286v-46h84v46z" fill="#180a2a" stroke="#ff2bd6" stroke-opacity=".55" stroke-width="2" />
+    <path d="M88 240l50-30 50 30z" fill="#22103a" stroke="#ff2bd6" stroke-opacity=".7" stroke-width="2" />
+    <path d="M126 286v-26h24v26z" fill="#fcee0a" fill-opacity=".18" stroke="#fcee0a" stroke-opacity=".6" stroke-width="2" />
+  </g>
+  <use href="#pixelTree" transform="translate(842 234)" />
+  <use href="#pixelTree" transform="translate(906 244) scale(.8)" />
+
+  <!-- horizon -->
+  <rect x="0" y="266" width="1024" height="42" fill="url(#horizonGlow)" />
+  <rect x="0" y="285" width="1024" height="2" fill="#9dffe0" opacity=".7" />
+
+  <!-- tilled field -->
+  <g mask="url(#fieldMask)" fill="none" stroke="#00ffae">
+    <g stroke-width="2" stroke-opacity=".45">
+      <path d="M512 286 470 512M512 286 384 512M512 286 252 512M512 286 66 512M512 286-190 512M512 286 554 512M512 286 640 512M512 286 772 512M512 286 958 512M512 286 1214 512" />
+    </g>
+    <g stroke-width="1.6" stroke-opacity=".3">
+      <path d="M0 294h1024M0 304h1024M0 318h1024M0 338h1024M0 368h1024M0 412h1024M0 478h1024" />
+    </g>
+  </g>
+
+  <!-- planted rows: each row's base sits on a tilled line, nearer rows larger -->
+  <g opacity=".85">
+    <use href="#sprout" transform="translate(66 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(166 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(266 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(366 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(466 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(566 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(666 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(766 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(866 320) scale(1.5)" />
+    <use href="#sprout" transform="translate(966 320) scale(1.5)" />
+  </g>
+  <g>
+    <use href="#sprout" transform="translate(46 383) scale(2.4)" />
+    <use href="#sprout" transform="translate(186 383) scale(2.4)" />
+    <use href="#sprout" transform="translate(326 383) scale(2.4)" />
+    <use href="#sprout" transform="translate(466 383) scale(2.4)" />
+    <use href="#sprout" transform="translate(606 383) scale(2.4)" />
+    <use href="#sprout" transform="translate(746 383) scale(2.4)" />
+    <use href="#sprout" transform="translate(886 383) scale(2.4)" />
+  </g>
+  <g>
+    <use href="#sprout" transform="translate(-10 430) scale(4)" />
+    <use href="#sprout" transform="translate(185 430) scale(4)" />
+    <use href="#sprout" transform="translate(380 430) scale(4)" />
+    <use href="#sprout" transform="translate(575 430) scale(4)" />
+    <use href="#sprout" transform="translate(770 430) scale(4)" />
+    <use href="#sprout" transform="translate(965 430) scale(4)" />
+  </g>
+</svg>

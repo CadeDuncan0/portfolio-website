@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="1024" height="512">
+  <!-- Windows 7 Web OS: a stack of glass windows over a neon horizon, the
+       front one framing a four-pane flag recolored to the site's palette. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#061428" />
+      <stop offset=".6" stop-color="#050b1a" />
+      <stop offset="1" stop-color="#04060e" />
+    </linearGradient>
+    <radialGradient id="orb">
+      <stop offset="0" stop-color="#7fe9ff" stop-opacity=".45" />
+      <stop offset=".45" stop-color="#00b0ff" stop-opacity=".16" />
+      <stop offset="1" stop-color="#0060ff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="washMag">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity=".2" />
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00eaff" stop-opacity="0" />
+      <stop offset=".5" stop-color="#9df3ff" stop-opacity=".3" />
+      <stop offset="1" stop-color="#00eaff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d2a48" stop-opacity=".92" />
+      <stop offset="1" stop-color="#060d1c" stop-opacity=".86" />
+    </linearGradient>
+    <linearGradient id="titlebar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d5c8f" stop-opacity=".95" />
+      <stop offset="1" stop-color="#0d3358" stop-opacity=".9" />
+    </linearGradient>
+    <linearGradient id="horizonGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00eaff" stop-opacity="0" />
+      <stop offset=".5" stop-color="#00eaff" stop-opacity=".32" />
+      <stop offset="1" stop-color="#00eaff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="floorFade" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="512">
+      <stop offset="0" stop-color="#fff" stop-opacity=".15" />
+      <stop offset=".4" stop-color="#fff" stop-opacity=".9" />
+      <stop offset="1" stop-color="#fff" stop-opacity=".45" />
+    </linearGradient>
+    <mask id="floorMask">
+      <rect width="1024" height="512" fill="url(#floorFade)" />
+    </mask>
+
+    <!-- four-pane flag, drawn in a 190x158 cell with a slight wave -->
+    <path id="paneTL" d="M2 26 88 12v64L2 84Z" />
+    <path id="paneTR" d="M98 10 188 0v66l-90 8Z" />
+    <path id="paneBL" d="M2 92 88 84v66L2 158Z" />
+    <path id="paneBR" d="M98 82 188 74v66l-90 8Z" />
+    <g id="flag" stroke-width="4" stroke-linejoin="round">
+      <use href="#paneTL" fill="#00eaff" fill-opacity=".16" stroke="#00eaff" />
+      <use href="#paneTR" fill="#ff2bd6" fill-opacity=".16" stroke="#ff2bd6" />
+      <use href="#paneBL" fill="#fcee0a" fill-opacity=".14" stroke="#fcee0a" />
+      <use href="#paneBR" fill="#00ffae" fill-opacity=".14" stroke="#00ffae" />
+    </g>
+  </defs>
+
+  <rect width="1024" height="512" fill="url(#sky)" />
+  <ellipse cx="880" cy="70" rx="360" ry="230" fill="url(#washMag)" />
+  <circle cx="512" cy="240" r="270" fill="url(#orb)" />
+
+  <!-- aero light streak -->
+  <g fill="none" stroke="url(#streak)" stroke-linecap="round">
+    <path d="M-40 336C180 336 300 92 560 92s330 150 520 118" stroke-width="26" opacity=".5" />
+    <path d="M-40 300C200 300 320 60 580 60s320 160 500 128" stroke-width="10" opacity=".7" />
+  </g>
+
+  <!-- horizon -->
+  <rect x="0" y="280" width="1024" height="42" fill="url(#horizonGlow)" />
+  <rect x="0" y="299" width="1024" height="2" fill="#a5f4ff" opacity=".65" />
+
+  <!-- floor grid -->
+  <g mask="url(#floorMask)" stroke="#00eaff" fill="none" stroke-width="1.6">
+    <g stroke-opacity=".38">
+      <path d="M512 300 482 512M512 300 436 512M512 300 376 512M512 300 298 512M512 300 192 512M512 300 42 512M512 300-178 512M512 300 542 512M512 300 588 512M512 300 648 512M512 300 726 512M512 300 832 512M512 300 982 512M512 300 1202 512" />
+    </g>
+    <g stroke-opacity=".3">
+      <path d="M0 306h1024M0 315h1024M0 325h1024M0 340h1024M0 359h1024M0 385h1024M0 419h1024M0 461h1024" />
+    </g>
+  </g>
+
+  <!-- window stack, back to front -->
+  <g opacity=".38">
+    <rect x="190" y="72" width="470" height="236" rx="12" fill="url(#glass)" stroke="#00eaff" stroke-opacity=".5" stroke-width="2.5" />
+    <path d="M190 84a12 12 0 0 1 12-12h446a12 12 0 0 1 12 12v28H190z" fill="url(#titlebar)" />
+    <path d="M190 112h470" stroke="#00eaff" stroke-opacity=".45" stroke-width="2" />
+  </g>
+  <g opacity=".66">
+    <rect x="242" y="106" width="470" height="236" rx="12" fill="url(#glass)" stroke="#00eaff" stroke-opacity=".6" stroke-width="2.5" />
+    <path d="M242 118a12 12 0 0 1 12-12h446a12 12 0 0 1 12 12v28H242z" fill="url(#titlebar)" />
+    <path d="M242 146h470" stroke="#00eaff" stroke-opacity=".5" stroke-width="2" />
+  </g>
+
+  <!-- front window -->
+  <rect x="294" y="140" width="470" height="236" rx="12" fill="url(#glass)" />
+  <path d="M294 152a12 12 0 0 1 12-12h446a12 12 0 0 1 12 12v28H294z" fill="url(#titlebar)" />
+  <rect x="314" y="157" width="86" height="6" rx="3" fill="#7df3ff" opacity=".75" />
+  <g>
+    <circle cx="678" cy="160" r="6" fill="#00eaff" />
+    <circle cx="702" cy="160" r="6" fill="#fcee0a" />
+    <circle cx="726" cy="160" r="6" fill="#ff2bd6" />
+  </g>
+  <use href="#flag" transform="translate(434 200)" />
+  <rect x="294" y="140" width="470" height="236" rx="12" fill="none" stroke="#00eaff" stroke-width="3" />
+  <rect x="287" y="133" width="484" height="250" rx="16" fill="none" stroke="#00eaff" stroke-opacity=".12" stroke-width="12" />
+  <path d="M294 180h470" stroke="#00eaff" stroke-opacity=".6" stroke-width="2" />
+</svg>

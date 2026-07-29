@@ -3,9 +3,7 @@ export const profile = {
   taglineBefore: 'Full-stack engineer crafting clean, aesthetic web experiences — and the systems that power them. I turn ideas into ',
   taglineHighlight: 'interfaces people love to use',
   taglineAfter: '.',
-  // Served from public/imgs — Next.js exposes the public/ dir at the site root.
   avatar: '/imgs/linkedin-headshot.png',
-  // Same public/ root — served from public/docs.
   resume: '/docs/Cade-Duncan-Resume.pdf',
 }
 
@@ -92,14 +90,14 @@ export const projects: Project[] = [
     date: 'Russell Sigler Inc.',
     desc: 'A full-stack order intake platform that handles hundreds of sales orders each month. Features include multi-entity transactional workflows, third-party API file delivery, and automated notifications.',
     tags: ['ASP.NET Core', 'C#', 'SQL', 'Entity Framework'],
-    preview: 'linear-gradient(135deg,#141a4d,#3a1f6b)',
+    preview: 'url(/imgs/projects/order-intake.svg) center/cover no-repeat, linear-gradient(135deg,#141a4d,#3a1f6b)',
   },
   {
     title: 'Windows 7 Web OS',
     date: 'Open Source',
     desc: 'An open-source recreation of the Windows 7 desktop in the browser, featuring a React component library built on 7.css, era-themed Internet Explorer, start menu, and more. Designed around a customizable, registry-driven config system.',
     tags: ['React', 'Next.js', 'TypeScript'],
-    preview: 'linear-gradient(135deg,#0d3433,#1a7a5f)',
+    preview: 'url(/imgs/projects/windows7-web-os.svg) center/cover no-repeat, linear-gradient(135deg,#0a2340,#1a5f8a)',
     website: 'https://cadeduncan.com/desktop',
     source: 'https://github.com/CadeDuncan0/portfolio-website-windows7',
   },
@@ -108,7 +106,7 @@ export const projects: Project[] = [
     date: 'Open Source',
     desc: 'Open-source C# gameplay mods published to Nexus Mods with 100,000+ downloads. Uses event-driven SMAPI hooks to manage real-time menu state with defensive logic that prevents a game-breaking soft-lock.',
     tags: ['C#', 'SMAPI'],
-    preview: 'linear-gradient(135deg,#3a1f0d,#9b5a18)',
+    preview: 'url(/imgs/projects/stardew-mods.svg) center/cover no-repeat, linear-gradient(135deg,#150a2e,#9b5a18)',
     website: 'https://www.nexusmods.com/profile/Stingrayss/mods',
     source: 'https://github.com/CadeDuncan0/StardewValley',
   },
@@ -117,7 +115,7 @@ export const projects: Project[] = [
     date: 'Personal Project',
     desc: 'A faithful recreation of the NES-era Super Mario Bros. Built in Godot, replicating the original physics, collision detection, and game-state systems.',
     tags: ['Godot', 'GDScript'],
-    preview: 'linear-gradient(135deg,#3a0d2e,#8a1f63)',
+    preview: 'url(/imgs/projects/super-mario-bros.svg) center/cover no-repeat, linear-gradient(135deg,#3a0d2e,#8a1f63)',
     source: 'https://github.com/CadeDuncan0/Super-Mario-Bros-In-Godot',
   },
 ]
