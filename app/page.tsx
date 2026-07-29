@@ -88,7 +88,7 @@ export default function Home() {
         <h2 className="font-display text-[30px] font-black uppercase tracking-[1px] text-strong neon-cyan max-sm:text-[34px]">
           Check out my latest work
         </h2>
-        <p className="mx-auto mt-3 max-w-[460px] text-base font-medium leading-[1.55] text-muted max-sm:text-lg max-sm:leading-[1.6]">
+        <p className="mx-auto mt-3 max-w-[440px] text-base font-medium leading-[1.55] text-muted max-sm:text-lg max-sm:leading-[1.6]">
           I&apos;ve worked on a range of projects, from quick experiments to production web apps. Here are a few of my favorites.
         </p>
         <div className="mt-[30px] grid grid-cols-2 gap-[18px] text-left max-sm:mt-8 max-sm:grid-cols-1 max-sm:gap-6">
@@ -104,7 +104,7 @@ export default function Home() {
           Contact
         </span>
         <h2 className="font-display text-[34px] font-black uppercase tracking-[1px] text-strong neon-cyan">Get in Touch</h2>
-        <p className="mx-auto mt-3 max-w-[420px] text-base font-medium leading-[1.55] text-muted max-sm:text-lg max-sm:leading-[1.6]">
+        <p className="mx-auto mt-3 text-base font-medium leading-[1.55] text-muted max-sm:text-lg max-sm:leading-[1.6]">
           Want to chat? Send me an{' '}
           <a href={`mailto:${socials.email}`} className="border-b border-cyber-cyan text-cyber-cyan neon-cyan">
             email

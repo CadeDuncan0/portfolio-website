@@ -17,7 +17,7 @@ export const socials = {
 }
 
 export const about =
-  "I'm a full-stack software engineer at Russell Sigler Inc., where I design and ship internal platforms that replace legacy processes and streamline business-critical workflows. My work spans .NET and React — from an order-intake system processing hundreds of sales orders a month to reusable component libraries and automated reporting pipelines. I care about clean architecture, strong developer experience, and building software that measurably moves the needle for the teams that depend on it."
+  "I'm a full-stack software engineer at Russell Sigler Inc., where I design and ship internal platforms that replace legacy processes and streamline business-critical workflows. I care about clean architecture, strong developer experience, and building software that measurably moves the needle for the teams that depend on it."
 
 export type ListEntry = {
   letter: string
@@ -90,15 +90,15 @@ export const projects: Project[] = [
   {
     title: 'Order Intake Platform',
     date: 'Russell Sigler Inc.',
-    desc: 'A full-stack order intake platform that retired the legacy Esker Notes process and now handles hundreds of sales orders each month, consolidating multi-entity transactional workflows, third-party API file delivery, and automated notifications.',
+    desc: 'A full-stack order intake platform that handles hundreds of sales orders each month. Features include multi-entity transactional workflows, third-party API file delivery, and automated notifications.',
     tags: ['ASP.NET Core', 'C#', 'SQL', 'Entity Framework'],
     preview: 'linear-gradient(135deg,#141a4d,#3a1f6b)',
   },
   {
     title: 'Windows 7 Web OS',
     date: 'Open Source',
-    desc: 'A browser-based recreation of the Windows 7 Aero Glass desktop, featuring a custom window manager with Framer Motion animations, dual-role Supabase authentication, and a 25+ component design system documented in Storybook and guarded by zero-warning CI.',
-    tags: ['Next.js', 'TypeScript', 'Supabase', 'Redux Toolkit'],
+    desc: 'An open-source recreation of the Windows 7 desktop in the browser, featuring a React component library built on 7.css, era-themed Internet Explorer, start menu, and more. Designed around a customizable, registry-driven config system.',
+    tags: ['React', 'Next.js', 'TypeScript'],
     preview: 'linear-gradient(135deg,#0d3433,#1a7a5f)',
     website: 'https://cadeduncan.com/desktop',
     source: 'https://github.com/CadeDuncan0/portfolio-website-windows7',
@@ -106,8 +106,8 @@ export const projects: Project[] = [
   {
     title: 'Stardew Valley Mods',
     date: 'Open Source',
-    desc: 'Open-source C# gameplay mods published to Nexus Mods with 96,000+ downloads, using event-driven SMAPI hooks to manage real-time menu state with defensive logic that prevents a game-breaking soft-lock.',
-    tags: ['C#', 'SMAPI', 'Game Modding'],
+    desc: 'Open-source C# gameplay mods published to Nexus Mods with 100,000+ downloads. Uses event-driven SMAPI hooks to manage real-time menu state with defensive logic that prevents a game-breaking soft-lock.',
+    tags: ['C#', 'SMAPI'],
     preview: 'linear-gradient(135deg,#3a1f0d,#9b5a18)',
     website: 'https://www.nexusmods.com/profile/Stingrayss/mods',
     source: 'https://github.com/CadeDuncan0/StardewValley',
@@ -115,8 +115,8 @@ export const projects: Project[] = [
   {
     title: 'Super Mario Bros. NES Recreation',
     date: 'Personal Project',
-    desc: 'A faithful recreation of the NES-era Super Mario Bros. built in Godot, replicating the original physics, collision detection, and game-state systems.',
-    tags: ['Godot', 'GDScript', 'Game Dev'],
+    desc: 'A faithful recreation of the NES-era Super Mario Bros. Built in Godot, replicating the original physics, collision detection, and game-state systems.',
+    tags: ['Godot', 'GDScript'],
     preview: 'linear-gradient(135deg,#3a0d2e,#8a1f63)',
     source: 'https://github.com/CadeDuncan0/Super-Mario-Bros-In-Godot',
   },
