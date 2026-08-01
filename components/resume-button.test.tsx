@@ -17,7 +17,7 @@ describe('ResumeButton', () => {
   it('points at a path under public/, which is what Next.js serves at the site root', () => {
     render(<ResumeButton />)
 
-    expect(screen.getByRole('link', { name: /download resume/i })).toHaveAttribute('href', '/docs/Cade-Duncan-Resume.pdf')
+    expect(screen.getByRole('link', { name: /download resume/i })).toHaveAttribute('href', '/docs/cade-duncan-resume.pdf')
   })
 
   it('applies caller-supplied layout classes to the outer wrapper', () => {

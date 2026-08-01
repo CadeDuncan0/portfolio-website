@@ -4,7 +4,7 @@ export const profile = {
   taglineHighlight: 'interfaces people love to use',
   taglineAfter: '.',
   avatar: '/imgs/linkedin-headshot.png',
-  resume: '/docs/Cade-Duncan-Resume.pdf',
+  resume: '/docs/cade-duncan-resume.pdf',
 }
 
 export const socials = {
