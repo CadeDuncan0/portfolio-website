@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="1024" height="512">
+  <!-- GameList: a trophy (rankings/leaderboards) glowing over a neon horizon,
+       flanked by a shelf of tracked game-cover cards with star ratings. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171b4a" />
+      <stop offset=".58" stop-color="#0b0a26" />
+      <stop offset="1" stop-color="#050410" />
+    </linearGradient>
+    <radialGradient id="washCyan">
+      <stop offset="0" stop-color="#00eaff" stop-opacity=".22" />
+      <stop offset="1" stop-color="#00eaff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="washMag">
+      <stop offset="0" stop-color="#ff2bd6" stop-opacity=".24" />
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="trophyHalo">
+      <stop offset=".4" stop-color="#fcee0a" stop-opacity=".3" />
+      <stop offset=".72" stop-color="#ff2bd6" stop-opacity=".16" />
+      <stop offset="1" stop-color="#ff2bd6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="trophyFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcee0a" />
+      <stop offset=".55" stop-color="#ffa23c" />
+      <stop offset="1" stop-color="#ff2bd6" />
+    </linearGradient>
+    <linearGradient id="horizonGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00eaff" stop-opacity="0" />
+      <stop offset=".5" stop-color="#00eaff" stop-opacity=".32" />
+      <stop offset="1" stop-color="#00eaff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="floorFade" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="0" y2="512">
+      <stop offset="0" stop-color="#fff" stop-opacity=".15" />
+      <stop offset=".4" stop-color="#fff" stop-opacity=".9" />
+      <stop offset="1" stop-color="#fff" stop-opacity=".45" />
+    </linearGradient>
+    <mask id="floorMask">
+      <rect width="1024" height="512" fill="url(#floorFade)" />
+    </mask>
+    <mask id="trophyMask">
+      <rect x="404" y="88" width="216" height="132" fill="#fff" />
+      <g fill="#000">
+        <rect x="404" y="150" width="216" height="4" />
+        <rect x="404" y="166" width="216" height="6" />
+        <rect x="404" y="184" width="216" height="8" />
+        <rect x="404" y="204" width="216" height="11" />
+      </g>
+    </mask>
+
+    <!-- 5-point star, centered on origin, outer radius 26 -->
+    <path id="star" d="M0-26 6-8 25-8 10 3 15 21 0 10-15 21-10 3-25-8-6-8Z" />
+
+    <!-- game-cover card, tinted per instance via the 'color' property -->
+    <g id="cover">
+      <rect x="0" y="0" width="86" height="112" rx="8" fill="currentColor" fill-opacity=".12" stroke="currentColor" stroke-opacity=".7" stroke-width="2.5" />
+      <path d="M0 20h86" stroke="currentColor" stroke-opacity=".5" stroke-width="2" />
+      <rect x="10" y="8" width="30" height="6" rx="3" fill="currentColor" fill-opacity=".8" />
+      <use href="#star" transform="translate(16 96) scale(.42)" fill="#fcee0a" fill-opacity=".9" />
+    </g>
+  </defs>
+
+  <rect width="1024" height="512" fill="url(#sky)" />
+  <ellipse cx="120" cy="90" rx="380" ry="240" fill="url(#washCyan)" />
+  <ellipse cx="900" cy="70" rx="360" ry="230" fill="url(#washMag)" />
+
+  <!-- horizon -->
+  <rect x="0" y="280" width="1024" height="42" fill="url(#horizonGlow)" />
+  <rect x="0" y="299" width="1024" height="2" fill="#a5f4ff" opacity=".65" />
+
+  <!-- floor grid -->
+  <g mask="url(#floorMask)" stroke="#00eaff" fill="none" stroke-width="1.6">
+    <g stroke-opacity=".38">
+      <path d="M512 300 482 512M512 300 436 512M512 300 376 512M512 300 298 512M512 300 192 512M512 300 42 512M512 300-178 512M512 300 542 512M512 300 588 512M512 300 648 512M512 300 726 512M512 300 832 512M512 300 982 512M512 300 1202 512" />
+    </g>
+    <g stroke-opacity=".3">
+      <path d="M0 306h1024M0 315h1024M0 325h1024M0 340h1024M0 359h1024M0 385h1024M0 419h1024M0 461h1024" />
+    </g>
+  </g>
+
+  <!-- tracked-library shelf: flanking game-cover cards, back to front -->
+  <g style="color:#00ffae" opacity=".55">
+    <use href="#cover" transform="translate(40 292) scale(.8)" />
+    <use href="#cover" transform="translate(898 292) scale(.8)" />
+  </g>
+  <g style="color:#ff2bd6" opacity=".8">
+    <use href="#cover" transform="translate(150 232) scale(.92)" />
+    <use href="#cover" transform="translate(788 232) scale(.92)" />
+  </g>
+  <g style="color:#00eaff">
+    <use href="#cover" transform="translate(80 152) scale(1.05)" />
+    <use href="#cover" transform="translate(858 152) scale(1.05)" />
+  </g>
+
+  <!-- trophy: rankings / leaderboards / top-100s -->
+  <circle cx="512" cy="184" r="260" fill="url(#trophyHalo)" />
+
+  <g fill="none" stroke="#00eaff" stroke-opacity=".6" stroke-width="4">
+    <path d="M404 96C372 96 372 156 412 166" />
+    <path d="M620 96C652 96 652 156 612 166" />
+  </g>
+
+  <path d="M412 90C412 90 404 90 404 118C404 148 434 176 474 182L474 196C474 196 424 204 424 226L600 226C600 204 550 196 550 196L550 182C590 176 620 148 620 118C620 90 612 90 612 90Z"
+        fill="url(#trophyFill)" mask="url(#trophyMask)" />
+  <path d="M412 90C412 90 404 90 404 118C404 148 434 176 474 182L474 196C474 196 424 204 424 226L600 226C600 204 550 196 550 196L550 182C590 176 620 148 620 118C620 90 612 90 612 90Z"
+        fill="none" stroke="#fff" stroke-opacity=".18" stroke-width="2" />
+
+  <use href="#star" transform="translate(512 136) scale(1.35)" fill="#fff" fill-opacity=".92" />
+
+  <rect x="452" y="226" width="120" height="18" rx="3" fill="#0c1230" stroke="#00eaff" stroke-opacity=".7" stroke-width="2.5" />
+  <rect x="428" y="244" width="168" height="28" rx="4" fill="#0c1230" stroke="#00eaff" stroke-opacity=".7" stroke-width="2.5" />
+  <rect x="440" y="252" width="144" height="4" fill="#00eaff" opacity=".4" />
+</svg>
