@@ -86,16 +86,9 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Order Intake Platform',
-    date: 'Russell Sigler Inc.',
-    desc: 'A full-stack order intake platform that handles hundreds of sales orders each month. Features include multi-entity transactional workflows, third-party API file delivery, and automated notifications.',
-    tags: ['ASP.NET Core', 'C#', 'SQL', 'Entity Framework'],
-    preview: 'url(/imgs/projects/order-intake.svg) center/cover no-repeat, linear-gradient(135deg,#141a4d,#3a1f6b)',
-  },
-  {
     title: 'Windows 7 Web OS',
     date: 'Open Source',
-    desc: 'An open-source recreation of the Windows 7 desktop in the browser, featuring a React component library built on 7.css, era-themed Internet Explorer, start menu, and more. Designed around a customizable, registry-driven config system.',
+    desc: 'A recreation of the Windows 7 desktop in the browser, featuring an era-themed login screen, desktop screen, Internet Explorer app, and more. Designed around a customizable, registry-driven config system.',
     tags: ['React', 'Next.js', 'TypeScript'],
     preview: 'url(/imgs/projects/windows7-web-os.svg) center/cover no-repeat, linear-gradient(135deg,#0a2340,#1a5f8a)',
     website: 'https://cadeduncan.com/desktop',
@@ -104,7 +97,7 @@ export const projects: Project[] = [
   {
     title: 'Stardew Valley Mods',
     date: 'Open Source',
-    desc: 'Open-source C# gameplay mods published to Nexus Mods with 100,000+ downloads. Uses event-driven SMAPI hooks to manage real-time menu state with defensive logic that prevents a game-breaking soft-lock.',
+    desc: 'Open-source C# gameplay mods published to Nexus Mods with 100,000+ downloads. Uses SMAPI event hooks to manage real-time menu states.',
     tags: ['C#', 'SMAPI'],
     preview: 'url(/imgs/projects/stardew-mods.svg) center/cover no-repeat, linear-gradient(135deg,#150a2e,#9b5a18)',
     website: 'https://www.nexusmods.com/profile/Stingrayss/mods',
@@ -118,4 +111,11 @@ export const projects: Project[] = [
     preview: 'url(/imgs/projects/super-mario-bros.svg) center/cover no-repeat, linear-gradient(135deg,#3a0d2e,#8a1f63)',
     source: 'https://github.com/CadeDuncan0/Super-Mario-Bros-In-Godot',
   },
+  {
+    title: 'GameList',
+    date: 'Under Construction',
+    desc: "A full-stack video game tracking and social platform inspired by AniList, with library tracking, ratings and reviews, activity feeds, and forums.",
+    tags: ['React', 'Next.js', 'TypeScript', 'Supabase'],
+    preview: 'url(/imgs/projects/gamelist.svg) center/cover no-repeat, linear-gradient(135deg,#141a4d,#3a1f6b)',
+  }
 ]
