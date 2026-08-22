@@ -135,8 +135,23 @@ body::after {
   .clip-corner-sm {
     clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
   }
+  /* Notched bottom-right corner. Only the 45° diagonal needs clipping, so the
+     four straight edges are pushed 1px outside the border box instead of
+     sitting exactly on it: Firefox snaps border painting to device pixels but
+     rasterizes the clip path independently, so a sub-pixel border (1px becomes
+     0.8px at 80% zoom) landing on a fractional edge could fall entirely outside
+     the clip and vanish — the bottom border dropped out per grid row, since
+     cards in a row share a top and height. The diagonal keeps its exact line
+     (x + y is constant, so both endpoints move 1px further out along it) and
+     the corner looks unchanged. */
   .clip-card {
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+    clip-path: polygon(
+      -1px -1px,
+      calc(100% + 1px) -1px,
+      calc(100% + 1px) calc(100% - 17px),
+      calc(100% - 17px) calc(100% + 1px),
+      -1px calc(100% + 1px)
+    );
   }
   .clip-logo {
     clip-path: polygon(22% 0, 100% 0, 100% 78%, 78% 100%, 0 100%, 0 22%);
