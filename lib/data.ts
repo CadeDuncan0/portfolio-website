@@ -74,9 +74,18 @@ export const skills: string[] = [
   'Vitest',
 ]
 
+/**
+ * Every card's meta line answers the same two questions in the same order —
+ * what the thing is, then where it is in its life — so the line reads as a
+ * label rather than a free-form note. `status` is a closed union to keep that
+ * second half from drifting into one-off phrasings.
+ */
+export type ProjectStatus = 'Live' | 'In Development'
+
 export type Project = {
   title: string
-  date: string
+  type: string
+  status: ProjectStatus
   desc: string
   tags: string[]
   preview: string
@@ -87,7 +96,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: 'Windows 7 Web OS',
-    date: 'Open Source',
+    type: 'Web App',
+    status: 'Live',
     desc: 'A recreation of the Windows 7 desktop in the browser, featuring an era-themed login screen, desktop screen, Internet Explorer app, and more. Designed around a customizable, registry-driven config system.',
     tags: ['React', 'Next.js', 'TypeScript'],
     preview: 'url(/imgs/projects/windows7-web-os.svg) center/cover no-repeat, linear-gradient(135deg,#0a2340,#1a5f8a)',
@@ -96,7 +106,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Stardew Valley Mods',
-    date: 'Open Source',
+    type: 'Game',
+    status: 'Live',
     desc: 'Open-source C# gameplay mods published to Nexus Mods with 100,000+ downloads. Uses SMAPI event hooks to manage real-time menu states.',
     tags: ['C#', 'SMAPI'],
     preview: 'url(/imgs/projects/stardew-mods.svg) center/cover no-repeat, linear-gradient(135deg,#150a2e,#9b5a18)',
@@ -104,8 +115,9 @@ export const projects: Project[] = [
     source: 'https://github.com/CadeDuncan0/StardewValley',
   },
   {
-    title: 'Super Mario Bros. NES Recreation',
-    date: 'Personal Project',
+    title: 'Super Mario Bros.',
+    type: 'Game',
+    status: 'In Development',
     desc: 'A faithful recreation of the NES-era Super Mario Bros. Built in Godot, replicating the original physics, collision detection, and game-state systems.',
     tags: ['Godot', 'GDScript'],
     preview: 'url(/imgs/projects/super-mario-bros.svg) center/cover no-repeat, linear-gradient(135deg,#3a0d2e,#8a1f63)',
@@ -113,7 +125,8 @@ export const projects: Project[] = [
   },
   {
     title: 'GameList',
-    date: 'Under Construction',
+    type: 'Web App',
+    status: 'In Development',
     desc: "A full-stack video game tracking and social platform inspired by AniList, with library tracking, ratings and reviews, activity feeds, and forums.",
     tags: ['React', 'Next.js', 'TypeScript', 'Supabase'],
     preview: 'url(/imgs/projects/gamelist.svg) center/cover no-repeat, linear-gradient(135deg,#141a4d,#3a1f6b)',

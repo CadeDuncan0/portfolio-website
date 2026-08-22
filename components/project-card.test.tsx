@@ -5,7 +5,8 @@ import type { Project } from '@/lib/data'
 
 const project: Project = {
   title: 'Windows 7 Web OS',
-  date: 'Open Source',
+  type: 'Web App',
+  status: 'Live',
   desc: 'A browser-based recreation of the Windows 7 Aero Glass desktop.',
   tags: ['Next.js', 'TypeScript'],
   preview: 'linear-gradient(135deg,#0d3433,#1a7a5f)',
@@ -18,7 +19,8 @@ describe('ProjectCard', () => {
     render(<ProjectCard project={project} />)
 
     expect(screen.getByRole('heading', { name: project.title })).toBeInTheDocument()
-    expect(screen.getByText(project.date)).toBeInTheDocument()
+    expect(screen.getByText(project.type)).toBeInTheDocument()
+    expect(screen.getByText(project.status)).toBeInTheDocument()
     expect(screen.getByText(project.desc)).toBeInTheDocument()
     for (const tag of project.tags) {
       expect(screen.getByText(tag)).toBeInTheDocument()
