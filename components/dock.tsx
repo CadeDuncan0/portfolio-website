@@ -13,7 +13,7 @@ export function Dock() {
     <div className="fixed bottom-5 left-1/2 z-50 -translate-x-1/2">
       <div className="inline-flex items-center gap-1.5 rounded-[30px] border border-edge bg-surface px-3.5 py-[9px] shadow-[0_0_24px_rgba(0,234,255,0.22),inset_0_0_18px_rgba(0,234,255,0.06)] backdrop-blur-md">
         <Link href="/#" className={iconClass} aria-label="Home">
-          <Home className="h-[18px] w-[18px]" />
+          <Home className="h-[18px] w-[19px]" />
         </Link>
         <Divider />
         <a href={socials.github} target="_blank" rel="noopener noreferrer" className={iconClass} aria-label="GitHub">
