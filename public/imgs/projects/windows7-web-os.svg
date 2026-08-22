@@ -66,10 +66,6 @@
     <path d="M-40 300C200 300 320 60 580 60s320 160 500 128" stroke-width="10" opacity=".7" />
   </g>
 
-  <!-- horizon -->
-  <rect x="0" y="280" width="1024" height="42" fill="url(#horizonGlow)" />
-  <rect x="0" y="299" width="1024" height="2" fill="#a5f4ff" opacity=".65" />
-
   <!-- floor grid -->
   <g mask="url(#floorMask)" stroke="#00eaff" fill="none" stroke-width="1.6">
     <g stroke-opacity=".38">
