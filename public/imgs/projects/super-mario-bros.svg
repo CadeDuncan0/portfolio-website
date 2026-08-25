@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 512" width="1024" height="512">
   <!-- Super Mario Bros. NES Recreation: 8-bit level built out of neon —
-       question block, block staircase, warp pipe and a brick floor. -->
+       question blocks, floating brick platform, block staircase, warp pipe,
+       a goomba and a brick floor. -->
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0c0a2e" />
@@ -37,14 +38,29 @@
       </g>
     </pattern>
     <path id="cloud" d="M24 0h24v8h16v8h8v8H0v-8h8V8h16z" />
+    <g id="qblock">
+      <rect width="55" height="55" fill="#1b1405" stroke="#fcee0a" stroke-width="3" />
+      <g fill="#fcee0a" fill-opacity=".7">
+        <rect x="6.25" y="6" width="5" height="5" />
+        <rect x="43.75" y="6" width="5" height="5" />
+        <rect x="6.25" y="43" width="5" height="5" />
+        <rect x="43.75" y="43" width="5" height="5" />
+      </g>
+      <g fill="#fcee0a">
+        <rect x="17.5" y="7.5" width="20" height="5" />
+        <rect x="12.5" y="12.5" width="10" height="5" />
+        <rect x="32.5" y="12.5" width="10" height="5" />
+        <rect x="32.5" y="17.5" width="10" height="5" />
+        <rect x="27.5" y="22.5" width="10" height="5" />
+        <rect x="22.5" y="27.5" width="10" height="5" />
+        <rect x="22.5" y="32.5" width="10" height="5" />
+        <rect x="22.5" y="42.5" width="10" height="5" />
+      </g>
+    </g>
   </defs>
 
   <rect width="1024" height="512" fill="url(#sky)" />
   <ellipse cx="140" cy="90" rx="380" ry="240" fill="url(#washCyan)" />
-
-  <!-- sun -->
-  <circle cx="560" cy="250" r="250" fill="url(#sunHalo)" />
-  <circle cx="560" cy="250" r="168" fill="url(#sunFill)" mask="url(#sunMask)" />
 
   <!-- pixel clouds -->
   <g fill="#bff0ff" fill-opacity=".18" stroke="#00eaff" stroke-opacity=".45" stroke-width="2.5">
@@ -52,27 +68,21 @@
     <use href="#cloud" transform="translate(772 62) scale(1.15)" />
   </g>
 
-  <!-- question block -->
-  <g>
-    <rect x="296" y="246" width="96" height="96" rx="4" fill="#1b1405" stroke="#fcee0a" stroke-opacity=".14" stroke-width="16" />
-    <rect x="300" y="250" width="88" height="88" rx="2" fill="#1b1405" stroke="#fcee0a" stroke-width="4" />
-    <g fill="#fcee0a" fill-opacity=".7">
-      <rect x="310" y="260" width="8" height="8" />
-      <rect x="370" y="260" width="8" height="8" />
-      <rect x="310" y="320" width="8" height="8" />
-      <rect x="370" y="320" width="8" height="8" />
-    </g>
-    <g fill="#fcee0a">
-      <rect x="324" y="254" width="40" height="10" />
-      <rect x="314" y="264" width="20" height="10" />
-      <rect x="354" y="264" width="20" height="10" />
-      <rect x="354" y="274" width="20" height="10" />
-      <rect x="344" y="284" width="20" height="10" />
-      <rect x="334" y="294" width="20" height="10" />
-      <rect x="334" y="304" width="20" height="10" />
-      <rect x="334" y="324" width="20" height="10" />
-    </g>
+  <!-- floating platform: bricks with question blocks, all 55x55, 2px of visible dead space between each block's outer border (stroke-width 3 is centered on the path, so the 5px gap between rects yields 5-3=2px of true clear space), centered on x=512 -->
+  <g fill="#1c0a2e" stroke="#ff2bd6" stroke-width="3">
+    <rect x="334.5" y="180" width="55" height="55" />
+    <rect x="454.5" y="180" width="55" height="55" />
+    <rect x="514.5" y="180" width="55" height="55" />
+    <rect x="634.5" y="180" width="55" height="55" />
   </g>
+  <g stroke="#ff2bd6" stroke-width="3" fill="none">
+    <path d="M334.5 198h55M334.5 216h55M362 180v18M348.25 198v18M375.75 198v18M362 216v19" />
+    <path d="M454.5 198h55M454.5 216h55M482 180v18M468.25 198v18M495.75 198v18M482 216v19" />
+    <path d="M514.5 198h55M514.5 216h55M542 180v18M528.25 198v18M555.75 198v18M542 216v19" />
+    <path d="M634.5 198h55M634.5 216h55M662 180v18M648.25 198v18M675.75 198v18M662 216v19" />
+  </g>
+  <use href="#qblock" transform="translate(394.5 180)" />
+  <use href="#qblock" transform="translate(574.5 180)" />
 
   <!-- block staircase -->
   <g fill="#071a2e" stroke="#00eaff" stroke-width="3">
