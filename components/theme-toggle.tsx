@@ -59,7 +59,7 @@ export function ThemeToggle() {
       aria-pressed={!isDark}
       className="flex h-[38px] w-[38px] items-center justify-center rounded-full border border-cyber-yellow/40 bg-fill text-cyber-yellow shadow-none transition-all duration-200 hover:border-cyber-yellow/75 hover:shadow-[0_0_18px_rgba(252,238,10,0.55)]"
     >
-      {isDark ? <Sun className="h-[19px] w-[19px]" /> : <Moon className="h-[19px] w-[19px]" />}
+      {isDark ? <Sun className="h-[18px] w-[18px]" /> : <Moon className="h-[18px] w-[18px]" />}
     </button>
   )
 }
